@@ -1,15 +1,18 @@
 package ActivityB;
-
 import java.util.Scanner;
-
 public class Main {
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
 
-    while(true) {
-      System.out.print("Enter your score: ");
-      int score = input.nextInt();
-      System.out.println(gpaChecker(score));;
+    System.out.println("GPA CHECKER\n__________________________________");
+    try {
+      while(true) {
+        System.out.print("Enter your score: ");
+        int score = input.nextInt();
+        System.out.println(gpaChecker(score));;
+      }
+    } catch(Exception e) {
+      System.out.println("That is not a valid input, please try again.");
     }
   }
   static String gpaChecker(int score) {
